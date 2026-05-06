@@ -1,0 +1,17 @@
+{
+  "repo": "amber-trade-risk-forge",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 182,
+    "watch": 129
+  },
+  "terms": [
+    "spread pressure",
+    "fill risk",
+    "portfolio drift",
+    "quote width"
+  ]
+}
