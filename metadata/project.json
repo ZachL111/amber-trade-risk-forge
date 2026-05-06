@@ -1,0 +1,32 @@
+{
+  "index": 398,
+  "phase": 2,
+  "batch": 45,
+  "name": "amber-trade-risk-forge",
+  "planned_name": "amber-trade-risk-forge",
+  "language": "Zig",
+  "category": "Trading systems",
+  "goal": "Design a Zig verification harness for risk systems, covering policy evaluation, deny and allow fixtures, and failure-oriented tests.",
+  "repository_url": "https://github.com/ZachL111/amber-trade-risk-forge",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 176,
+    "risk_penalty": 4,
+    "latency_penalty": 3,
+    "weight_bonus": 2,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
