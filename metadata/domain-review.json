@@ -1,0 +1,73 @@
+{
+  "repo": "amber-trade-risk-forge",
+  "language": "Zig",
+  "category": "Trading systems",
+  "goal": "Design a Zig verification harness for risk systems, covering policy evaluation, deny and allow fixtures, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "spread pressure",
+      "fill risk",
+      "portfolio drift",
+      "quote width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "spread pressure",
+      "signal": 70,
+      "slack": 25,
+      "drag": 8,
+      "confidence": 46,
+      "score": 187,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "fill risk",
+      "signal": 82,
+      "slack": 50,
+      "drag": 11,
+      "confidence": 45,
+      "score": 226,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "portfolio drift",
+      "signal": 86,
+      "slack": 26,
+      "drag": 20,
+      "confidence": 57,
+      "score": 195,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "quote width",
+      "signal": 89,
+      "slack": 40,
+      "drag": 13,
+      "confidence": 85,
+      "score": 264,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "spread pressure",
+      "signal": 77,
+      "slack": 51,
+      "drag": 21,
+      "confidence": 55,
+      "score": 197,
+      "lane": "ship"
+    }
+  ]
+}
